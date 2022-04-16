@@ -1,0 +1,511 @@
+.Banner{
+    background-image: url(../public/assets/img/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    
+
+    &Text{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        // padding-top: calc(50% - 55rem);
+        color: #fff;
+        font-size: 5rem;
+        font-weight: bold;
+        position: absolute;
+        top: calc(50% - 10rem);
+        left: 0;
+        right: 0;
+
+    }
+
+    &TextDown{
+        font-size: 2rem;
+        color: #fff;
+        text-align: center;
+        font-weight: 600;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 14rem;
+        animation: bounce 2s infinite;
+        bottom: 4rem;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    &DownArrow{
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        animation: bounce 2s infinite;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+.Section1{
+    width: 100%;
+    display: flex;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    flex-wrap: wrap;
+    gap: 5rem;
+    
+
+
+    & > *:nth-child(1){
+        flex: 1 1 20%;
+    }
+
+    & > *:nth-child(2){
+        flex: 1 1 60%;
+    }
+
+    // & > *{
+    //     flex: 1 1 5rem;
+    // }
+
+
+    // & > *{
+    //     flex-basis: 60%;
+    // }
+
+    // & > :first-child{
+    //     flex-basis: 30%;
+    // }
+    // grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+
+    .Profile{
+        width: 40%;
+        background-color: #F5F5F5;
+        padding: 3rem;
+        border-radius: 3rem;
+        border: 0.1rem solid rgb(0,0,0, 0.2);
+        box-shadow: 0.1rem 0.1rem 2rem rgba(0,0,0,0.5);
+        margin: 0rem auto;
+
+        &Me{
+            width: 25rem;
+            border-radius: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+        }
+        &Name{
+            margin-top: 1rem;
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        &Subtitle{
+            font-size: 2rem;
+            font-weight: 300;
+            text-align: center;
+        }
+        &Menu{
+            padding: 0rem;
+            &Title{
+                margin-top: 3rem;
+                font-size: 2rem;
+                font-weight: bold;
+            }
+            &Social{
+                margin-top: 1rem;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+
+                img{
+                    width: 5rem;
+                    height:  5rem;
+                }
+            }
+
+            &Text{
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                font-size: 1.5rem;
+                text-align: justify;
+                font-weight: 300;
+            }
+        }
+    
+    }
+
+    .Info{
+        width: 100%;
+        height: auto;
+        background-color: #F0F0F0;
+        margin: 0rem auto;
+        border-radius: 1rem;
+        border: 0.1rem solid rgb(0,0,0, 0.2);
+        box-shadow: 0.1rem 0.1rem 1rem rgba(0,0,0,0.5);
+
+
+        &Nav{
+            width: 100%;
+            padding: 3rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            gap: 5rem;
+            border-radius: 1rem;
+            background-color: rgb(199, 199, 199);
+
+            &Item{
+                transition: 0.5s;
+                cursor: pointer;
+            }
+
+            &Item:hover{
+                background-color: #000;
+                color: #fff;
+                padding: 1rem;
+                border-radius: 0.5rem;
+                transition: 0.5s;
+                cursor: pointer;
+            }
+        }
+
+        &Cont{
+            width: 100%;
+            height: 100vh;
+            margin-top: 2rem;
+            margin-left: auto;
+            margin-right: auto;
+            max-height: 65rem;
+            overflow-x: hidden;
+            overflow-y: scroll;
+
+            &Works{
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+                
+                
+                &Card{
+                    border-radius: 50%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 2rem;
+                    max-height: 100rem;
+                    max-width: 30rem;
+                    
+                    
+                    &Img{
+                        margin-top: 2rem;
+                        width:25rem;
+                        height: 25rem;
+                        border-radius: 3rem;
+                        object-fit: cover;
+                    }
+                    &Title{
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                }
+                &Card:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+    }
+}
+
+.ldsEllipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+
+    div {
+        position: absolute;
+        top: 33px;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: rgb(184, 184, 184);
+        border: 1px solid rgb(0, 0, 0);
+        animation-timing-function: cubic-bezier(0, 1, 1, 0);
+
+        &:nth-child(1) {
+            left: 8px;
+            animation: ldsEllipsis1 0.6s infinite;
+        }
+
+        &:nth-child(2) {
+            left: 8px;
+            animation: ldsEllipsis2 0.6s infinite;
+        }
+
+        &:nth-child(3) {
+            left: 32px;
+            animation: ldsEllipsis2 0.6s infinite;
+        }
+        &:nth-child(4) {
+            left: 56px;
+            animation: ldsEllipsis3 0.6s infinite;
+        }
+
+    }
+}
+
+
+.Tetch{
+    width: 100%;
+    background-color: #F0F0F0;
+    margin: 0rem auto;
+    border-radius: 1rem;
+    border: 0.1rem solid rgb(0,0,0, 0.2);
+    box-shadow: 0.1rem 0.1rem 1rem rgba(0,0,0,0.5);
+
+
+    &Nav{
+        width: 100%;
+        padding: 3rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        display: flex;
+        gap: 5rem;
+        border-radius: 1rem;
+        background-color: rgb(199, 199, 199);
+
+        &Item{
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        
+        .active{            
+            background-color: #000;
+            color: #fff;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        &Item:hover{
+            background-color: #000;
+            color: #fff;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+    }
+
+    &Cont{
+        width: 100%;
+        height: 100rem;
+        margin-top: 0rem;
+        margin-left: auto;
+        margin-right: auto;
+        max-height: 50rem;
+        overflow-x: hidden;
+        overflow-y: scroll;
+
+        &Works{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+            
+            
+            &Card{
+                width: 13rem;
+                height: 13rem;
+                border-radius: 50%;
+                background-color: rgb(218, 218, 218);
+                margin-left: auto;
+                margin-right: auto;
+                border: 0.1rem solid rgb(0, 0, 0);
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                transition: 0.5s;
+                
+                
+                &Img{
+                    display: flex;
+                    padding: 0rem;
+                    justify-content: center;
+                    margin: 0 auto;
+                    margin-top: 1.5rem;
+                    width:10rem;
+                    height: 10rem;
+                    border-radius: 50%;
+                }
+                &Title{
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    text-align: center;
+                }
+            }
+            &Card:hover{
+                transform: scale(1.5);
+                transform: scale(1.2);
+                background-color: rgb(230, 255, 198);
+                transition: 0.5s;
+            }
+        }
+    }
+
+
+}
+
+.InfoTetch{
+
+    &Cont{
+        width: 100%;
+        margin-top: 5rem;
+        margin-left: auto;
+        margin-right: auto;
+        max-height: 40rem;
+        background-color: rgb(218, 218, 218);
+        padding: 2rem;
+        min-height: 25rem;
+        border-radius: 2rem;
+
+        &Header{
+            display: flex;
+            justify-content: flex-start;
+            vertical-align: middle;
+            padding-bottom: 1.5rem;
+
+        }
+    }
+
+    &Img{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    &Title{
+        vertical-align: middle;
+        text-align: center;
+        font-size: 2rem;
+        padding-top: 0.5rem;
+        padding-left: 0.5rem;
+        font-weight: bold;
+    }
+    &Desc{
+        vertical-align: middle;
+        text-align: justify;
+        font-size: 2rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        padding-bottom: 2rem;
+        font-weight: 300;
+    }
+
+
+}
+.Contact{
+    &Cont{
+        max-height: 70rem;
+        min-width: 320px;
+    }
+    &Card{
+        width: 60rem;
+        border-radius: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #E4E4E4;
+        padding: 2rem;
+        margin-bottom: 1rem;
+        transition: 1s;
+
+        img{
+            width: 10rem;
+            height: 10rem;
+        }
+
+        p{
+            font-size: 2rem;
+            font-weight: 500;
+            color: rgba(0,0,0,1);
+        }
+    }
+    
+    &Card:hover{
+        transition: 1s;
+        transform: scale(1.05);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Animations */
+@keyframes ldsEllipsis1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes ldsEllipsis3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes ldsEllipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
+    40% {-webkit-transform: translateY(-30px);}
+    60% {-webkit-transform: translateY(-15px);}
+   }
+    
+   @-moz-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+    40% {-moz-transform: translateY(-30px);}
+    60% {-moz-transform: translateY(-15px);}
+   }
+    
+   @-o-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+    40% {-o-transform: translateY(-30px);}
+    60% {-o-transform: translateY(-15px);}
+   }
+   @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+   }
+
+
+   

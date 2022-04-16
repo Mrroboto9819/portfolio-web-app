@@ -1,0 +1,36 @@
+.Nav{
+    width: 100%;
+    height: 110px;
+    background-color: #000;
+
+    img{
+        width: 25rem;
+        height: auto;
+    }
+}
+
+.NavM{
+    width: 100%;
+    height: 10vh;
+    background-color: #000;
+
+    img{
+        min-width: 5rem;
+        max-width: 12rem;
+        width: 12rem;
+        height: 5em;
+    }
+}
+
+.NavT{
+    width: 100%;
+    height: 10vh;
+    background-color: #000;
+
+    img{
+        min-width: 5rem;
+        max-width: 12rem;
+        width: 12rem;
+        height: 5em;
+    }
+}
